@@ -1,0 +1,32 @@
+package controller;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+
+@Controller
+public class Result {
+	@RequestMapping("/a")
+    public String m1() {
+        return "b5";
+    }
+
+    @RequestMapping("/b")
+    public String m2(Model m) {
+        m.addAttribute("message", "forward:/a");
+        return "forward:/a";
+    }
+
+    @RequestMapping("/c")
+    public String m3(RedirectAttributes params) {
+        params.addAttribute("message", "redirect:/a");
+        return "redirect:/a";
+    }
+
+    @RequestMapping("/d")
+    @ResponseBody
+    public String m4() {
+        return "@ResponseBody";
+    }
+}

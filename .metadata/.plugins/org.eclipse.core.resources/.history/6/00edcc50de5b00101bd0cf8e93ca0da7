@@ -1,0 +1,49 @@
+package controller;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import jakarta.servlet.ServletContext;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpSession;
+import model.User;
+
+@Controller
+@RequestMapping("/user")
+public class Hello {
+	
+	@Autowired
+     HttpServletRequest request;
+
+    @Autowired
+     HttpSession session;
+
+    @Autowired
+     ServletContext context;
+
+	@RequestMapping("/home")
+	public String load(Model model) {
+		model.addAttribute("mes", "my name is chien");
+		return "index";
+	}
+	
+	@GetMapping("create")
+	public String create(HttpServletRequest request) {
+		return "index";
+	}
+	
+	@PostMapping("/create")
+	public String createPost(HttpServletRequest request) {
+		String name = request.getParameter("name");
+		String pass = request.getParameter("pass");
+		System.out.println("name:" + name);
+		System.out.println("pass:" + pass);
+		
+		User u = new User(name,pass);
+		
+		request.setAttribute("u", u);
+		return "display";
+	}
+}

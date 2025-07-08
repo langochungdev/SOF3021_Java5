@@ -1,0 +1,18 @@
+package controller;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+@Controller
+public class Param {
+	@RequestMapping("/param/b2")
+	public String form() {
+		return "b2";
+	}
+	
+	@RequestMapping("/param/save/{x}")
+	public String save(@PathVariable("x") String x, @RequestParam("y") String y) {
+		return "b2";
+	}
+}

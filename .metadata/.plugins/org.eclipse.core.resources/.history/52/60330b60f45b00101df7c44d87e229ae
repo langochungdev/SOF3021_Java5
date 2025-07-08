@@ -1,0 +1,9 @@
+http://localhost:8080/hello
+
+http://localhost:8080/staff/new
+→ dữ liệu mẫu (id = 123)
+
+http://localhost:8080/student/form
+
+http://localhost:8080/student/save
+→ Submit sinh viên, lưu file upload vào E:/uploads 

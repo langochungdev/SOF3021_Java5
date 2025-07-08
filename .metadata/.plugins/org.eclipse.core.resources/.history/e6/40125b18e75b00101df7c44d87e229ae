@@ -1,0 +1,18 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form action="/param/save/10" method="post">
+		<input name="y">
+		<button>Save</button>
+	</form>
+	<ul>
+		<li>"x" từ URL: ${x}</li>
+		<li>y từ form: ${param.y}</li>
+	</ul>
+</body>
+</html>

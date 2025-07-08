@@ -1,0 +1,25 @@
+package controller;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+import model.Staff;
+
+@Controller
+@RequestMapping("staff")
+public class StaffController {
+    @RequestMapping("new")
+    public String newStaff(Model model) {
+        Staff staff = new Staff();
+        staff.setId("123");
+        model.addAttribute("staff", staff);
+        return "staff";
+    }
+    
+    @RequestMapping("save")
+    public String saveStaff(Model model, @ModelAttribute("staff") Staff staff) {
+        model.addAttribute("mes", "id:" + staff.getId( )+" "+ "name:" + staff.getName());
+        return "staff";
+    }
+    
+}

@@ -1,0 +1,37 @@
+package controller;
+import java.util.ArrayList;
+import java.util.List;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+import model.Product;
+
+@Controller
+public class ProductController {
+	@GetMapping("/product/form")
+	public String form(Model m) {
+		Product p = new Product();
+		p.setName("c");
+		p.setPrice(5000.0);
+		m.addAttribute("product", p);
+		return "b3";
+	}
+
+	@PostMapping("/product/save")
+	public String save(@ModelAttribute("product") Product p, Model model) {
+		List<Product> items = getItems();
+		items.add(p);
+		model.addAttribute("items", items);
+		return "b3";
+	}
+
+	@ModelAttribute("items")
+	public List<Product> getItems() {
+		List<Product> items = new ArrayList<>();
+		items.add(new Product("A", 1.0));
+		items.add(new Product("B", 12.0));
+		return items;
+	}
+}

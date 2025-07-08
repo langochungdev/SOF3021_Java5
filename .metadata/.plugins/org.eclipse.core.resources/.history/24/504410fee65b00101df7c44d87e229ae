@@ -1,0 +1,18 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form action="/param/save/10" method="post">
+		<input name="y" value="20">
+		<button>Save</button>
+	</form>
+	<ul>
+		<li>giá trị của biến đường dẫn "x" từ URL: ${x}</li>
+		<li>giá trị tham số y: ${param.y}</li>
+	</ul>
+</body>
+</html>

@@ -1,0 +1,9 @@
+NotBlank.sv.name=Vui lòng nh\u1EADp h\u1ECD và tên
+NotBlank.sv.email=Vui lòng nh\u1EADp \u0111\u1ECBa ch\u1EC9 email
+Email.sv.email=Vui lòng nh\u1EADp \u0111úng \u0111\u1ECBnh d\u1EA1ng email
+NotNull.sv.marks=Vui lòng nh\u1EADp \u0111i\u1EC3m
+Min.sv.marks=\u0110i\u1EC3m ph\u1EA3i l\u1EDBn h\u01A1n ho\u1EB7c b\u1EB1ng 0
+Max.sv.marks=\u0110i\u1EC3m ph\u1EA3i nh\u1ECF h\u01A1n ho\u1EB7c b\u1EB1ng 10
+NotNull.sv.gender=Vui lòng ch\u1ECDn gi\u1EDBi tính
+NotBlank.sv.faculty=Vui lòng ch\u1ECDn khoa
+NotEmpty.sv.hobbies=Vui lòng ch\u1ECDn s\u1EDF thích

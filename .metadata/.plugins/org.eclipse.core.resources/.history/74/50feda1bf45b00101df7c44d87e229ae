@@ -1,0 +1,25 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="jakarta.tags.core"%>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="fm"%>
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+
+<body>
+	<h1>Staff</h1>
+	<h2>${mes}</h2>
+	<hr>
+	<fm:form action="save" modelAttribute="staff" method="post">
+		staff id <fm:input path="id" />
+		<br> 
+		staff name <fm:input path="name" />
+		<br>
+		<fm:button>save</fm:button>
+	</fm:form>
+</body>
+
+</html>

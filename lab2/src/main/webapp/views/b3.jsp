@@ -1,0 +1,31 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form action="/product/save" method="post">
+		<input type="text" name="name" value="${product.name}" placeholder="name"> 
+		<input type="text" name="price" value="${product.price}" placeholder="price">
+		<button type="submit">Save</button>
+	</form>
+
+	<h3>new prouct</h3>
+	<ul>
+		<li>Name: ${product.name}</li>
+		<li>Price: ${product.price}</li>
+	</ul>
+
+	<h3>list product</h3>
+	<ul>
+		<c:forEach var="item" items="${items}">
+			<li>Name: ${item.name}</li>
+			<li>Price: ${item.price}</li>
+			<hr />
+		</c:forEach>
+	</ul>
+</body>
+</html>
