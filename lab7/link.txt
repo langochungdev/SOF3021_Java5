@@ -1,0 +1,15 @@
+http://localhost:8080/mailer/form
+http://localhost:8080/home/index
+http://localhost:8080/account/login
+
+đăng nhập mới truy cập được
+http://localhost:8080/account/edit
+http://localhost:8080/account/chgpwd
+http://localhost:8080/order/abc
+
+URL yêu cầu quyền admin
+http://localhost:8080/admin/dashboard
+http://localhost:8080/admin/users
+
+admin được truy cập không cần đăng nhập 
+http://localhost:8080/admin/home/index

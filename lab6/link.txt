@@ -1,0 +1,4 @@
+http://localhost:8080/category/index
+http://localhost:8080/product/searchPage
+http://localhost:8080/product/search
+http://localhost:8080/report/inventory-by-category
